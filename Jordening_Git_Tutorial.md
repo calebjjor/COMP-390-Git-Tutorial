@@ -185,7 +185,6 @@ That way you can fix the bug in your code and make a separate commit with a mess
 This will re-insert the code that was stashed so that you can continue making changes.
 
 
-
-##Conclusion##
+## **Conclusion**
 
 Although the functions that enable Git to be used as a collaborative tool were not thoroughly mentioned (i.e. cloning a remote repository to a local repository, pushing and pulling, etc.) this tutorial demonstrates how useful Git and other VCS's can be for securely tracking changes to a project made on a local repository, along with many other benefits.

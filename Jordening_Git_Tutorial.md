@@ -108,7 +108,11 @@ I will then go ahead and make another checkpoint in the git repository by adding
 Hypothetically, let's say that these changes that you made prove to be not needed for some reason, and you really want to get back to how things were in your first commit. With Git, this is made completely possible!
 
 By entering `$ git log`, you will see that you can see all of the commits you have made. In my example you can see how it lists the two commits I have made so far.
+
+
+
 <img width="569" alt="Log" src="https://user-images.githubusercontent.com/99101887/153798098-247a94d0-ee85-494e-8730-f5335d5b40fe.png">
+
 
 
 As you can see, there are hash codes in an olive color next to "commit." These hash codes can be used to access earlier committed versions of the project. To get back to my first commit that only has "print("Hello World!")", We can use the hashcode next to our first commit and enter:

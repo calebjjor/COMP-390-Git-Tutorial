@@ -1,10 +1,10 @@
 ## **Version Control Systems: Using Git**
 
-This is a basic tutorial that allows individuals to get comfortable with the basic functions of git. This tutorial does not explain how Git be used with a remote repository such as Github. It is simply to teach an individual how to use the basic functions of Git to track changes made throughout their own personal projects that will be edited on a local repository. 
+This is a basic tutorial that allows individuals to get comfortable with the basic functions of Git. This tutorial does not explain how Git be used with a remote repository such as Github. It is simply to teach an individual how to use the basic functions of Git to track changes made throughout their own personal projects that will be edited on a local repository. 
 
 ### What is it and why use it?
 
-Before we get into the tutorial, it will be beneficial to understand what a version control system is (in this case Git), why it is useful, and how it works. In general, version control systems are used to track the changes made to the source code over time. This is done by committing substantial changes periodically to the git repository. That way, if an error occurs while working on the project, the code can be reverted to an earlier state. 
+Before we get into the tutorial, it will be beneficial to understand what a version control system is (in this case Git), why it is useful, and how it works. In general, version control systems are used to track the changes made to the source code over time. This is done by committing substantial changes periodically to the Git repository. That way, if an error occurs while working on the project, the code can be reverted to an earlier state. 
 
 
 
@@ -62,7 +62,10 @@ Congratulations! You have successfully initialized your first Git repository. Yo
 The files currently in the directory will be listed by Git as "untracked." This can be seen by running the:
 `$ git status` command. 
 
+
+
 <img width="568" alt="Working Tree" src="https://user-images.githubusercontent.com/99101887/153798029-4119a0c6-fb6e-498d-8853-669166725925.png">
+
 
 
 As you can see, I have two files. The important one being the Tutorial.py, which will be tracked using Git after making changes to it.

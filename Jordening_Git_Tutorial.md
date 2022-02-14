@@ -13,8 +13,6 @@ One of the other main benefits of using a version control system is that it allo
 ### How does it work?
 There are three different areas Git uses to track your changes.
 
-_**ADD VISUAL**_
-
 **Working Tree**
 
 The Working Tree simply consists of the current directory you are in and the files that it contains. 
@@ -64,7 +62,8 @@ Congratulations! You have successfully initialized your first Git repository. Yo
 The files currently in the directory will be listed by Git as "untracked." This can be seen by running the:
 `$ git status` command. 
 
-![](Working Tree.png)
+<img width="568" alt="Working Tree" src="https://user-images.githubusercontent.com/99101887/153798029-4119a0c6-fb6e-498d-8853-669166725925.png">
+
 
 As you can see, I have two files. The important one being the Tutorial.py, which will be tracked using Git after making changes to it.
 
@@ -91,11 +90,13 @@ Let's say you would like to edit or add some new features to your code. Go ahead
 
 For my example, since the "print("Hello World")" commit, I have added two other print functions signifying the changes that might be made in an actual project. 
 
-![](Changes.png) 
+<img width="1203" alt="Changes" src="https://user-images.githubusercontent.com/99101887/153798056-22c48c5e-75fc-4496-9469-f62e55aaacd2.png">
+
 
 And as you can see here, Git is telling me that the Tutorial.py file has been modified since my last commit.
 
-![](Changes2.png)
+<img width="566" alt="Changes2" src="https://user-images.githubusercontent.com/99101887/153798070-c487c233-ceba-4d1b-90a7-4f67790722da.png">
+
 
 I will then go ahead and make another checkpoint in the git repository by adding the modified file to the Working Tree using `$ git .add <file_name>` again, and then commit these changes with another message.
 
@@ -104,7 +105,8 @@ I will then go ahead and make another checkpoint in the git repository by adding
 Hypothetically, let's say that these changes that you made prove to be not needed for some reason, and you really want to get back to how things were in your first commit. With Git, this is made completely possible!
 
 By entering `$ git log`, you will see that you can see all of the commits you have made. In my example you can see how it lists the two commits I have made so far.
-![](Log.png)
+<img width="569" alt="Log" src="https://user-images.githubusercontent.com/99101887/153798098-247a94d0-ee85-494e-8730-f5335d5b40fe.png">
+
 
 As you can see, there are hash codes in an olive color next to "commit." These hash codes can be used to access earlier committed versions of the project. To get back to my first commit that only has "print("Hello World!")", We can use the hashcode next to our first commit and enter:
 
@@ -114,13 +116,15 @@ As you can see, there are hash codes in an olive color next to "commit." These h
 **Detached Head State?**
 
 After inputting the command you should receive an odd message saying that you are entering a "detached HEAD state." 
-![](Detached Head.png)
+<img width="566" alt="Detached Head" src="https://user-images.githubusercontent.com/99101887/153798112-2b958d3f-cefd-4c39-9ba4-dfe7c4e1d0ee.png">
+
 
 Do not panic! The HEAD in Git acts as a reference to let you know where in the repo you are currently at. Everytime you make a new commit, the HEAD updates and points to that commit. By pointing to the most current commit, the HEAD is considered "attached." All we've done is moved back a commit, and so the head is "detached" from the most recent commit and is pointing towards an earlier commit. 
 
 Most importantly, if you look back at your project's code, you will see that it has reverted back to how it was after the first commit!
 
-![](Revert.png)
+<img width="1212" alt="Revert" src="https://user-images.githubusercontent.com/99101887/153798152-715a6dd0-a318-4569-a4e1-9ae4a05099a0.png">
+
 
 **Getting Back to Latest Commit**
 
@@ -130,7 +134,8 @@ If you would like to get back to your latest commit and exit out of the ever-so-
 
 This will bring up all of the commits and their subsequent hashcodes as seen below:
 
-![](Reflog.png)
+
+<img width="560" alt="Reflog" src="https://user-images.githubusercontent.com/99101887/153798166-f4217df0-cc0d-4eb9-9356-30a20113e2ed.png">
 
 To get back to the latest commit, simply use the checkout command again with the desired commit hashcode.
 

@@ -13,15 +13,15 @@ One of the other main benefits of using a version control system is that it allo
 ### How does it work?
 There are three different areas Git uses to track your changes.
 
-**Working Tree**
+#**Working Tree**
 
 The Working Tree simply consists of the current directory you are in and the files that it contains. 
 
-**Staging Area**
+#**Staging Area**
 
 After making some edits to your project, files can be added to the Staging Area (using the git add command). The files in the Staging Area will sit and wait to be committed. This allows you to maintain organization by breaking down large edits into smaller commits. 
 
-**Git Repository**
+#**Git Repository**
 
 Git creates an empty repository in which all committed versions of the project can be saved. Changes made to your project will not be committed to the .git repository until you actually run the git commit command (which we will see later). These commits can be accessed from the repository at any point in your work. That way, if you have an idea that didn't work out as planned or if something goes wrong you can access an earlier committed version of your project.
 
@@ -32,7 +32,7 @@ This tutorial will cover the basic functions of Git in order that it might be us
 To demonstrate how it works, we will be making changes to a basic python project.
 
 
-**Changing Directories**
+#**Changing Directories**
 
 Once you are in your command-line editor, the first thing you will want to do is change your directory to the one that you will be working in. This can be done on Mac in Terminal by using the cd command. 
 
@@ -44,7 +44,7 @@ For this tutorial I will be working in a directory that I have on my desktop cal
 `$ cd /Users/calebjordening/Desktop/Tutorial `
 
 
-**Initializing a .git Repository**
+#**Initializing a .git Repository**
 
 Now, we will start using Git. The first thing you want to do is initialize a git repository (if you have not done so already in the past). This can be done by using the command:
 
@@ -57,7 +57,7 @@ It is important to note that the .git repository is a hidden repo. You can confi
 
 Congratulations! You have successfully initialized your first Git repository. You can now start using Git!
 
-**Observing the Working Tree**
+#**Observing the Working Tree**
 
 The files currently in the directory will be listed by Git as "untracked." This can be seen by running the:
 `$ git status` command. 
@@ -70,7 +70,7 @@ The files currently in the directory will be listed by Git as "untracked." This 
 
 As you can see, I have two files. The important one being the Tutorial.py, which will be tracked using Git after making changes to it.
 
-**Adding a File to the Staging Area**
+#**Adding a File to the Staging Area**
 
 Alright, so say you want to create your first backup/copy of your project before making any edits. This will be done by adding a file to the Staging Area. To add a file to the staging area, type ` git add <file_name>`
 
@@ -78,7 +78,7 @@ In my case, I will type `$ git add Tutorial.py`
 
 To confirm that the file was added, use the `$ git status` command again, and you will see that there are "changes to be committed." Tutorial.py has been successfully added to the Staging Area, and is waiting to be committed. 
 
-**Making Your First Commit**
+#**Making Your First Commit**
 
 It's time for your first commit! To finally add your project to the Git repository, we must run the commit command. The simplest way of doing this is by entering: `git commit -m "<enter your message here>" `. 
 
@@ -87,7 +87,7 @@ The message is necessary and very important to add – as it allows for you to r
 As for the example project, all that is in my Tutorial.py file for this first commit is the function "print("Hello World!")" This is what has been saved into the git repository. While working on projects, you want to be committing backups to the repository after you've made substantial progress/changes.
 
 
-**Making Changes**
+#**Making Changes**
 
 Let's say you would like to edit or add some new features to your code. Go ahead and make these revisions. Once you are done making your changes, type `$ git status` and notice how it says "modified" next to your project file. This just signifies that changes have been made since your last commit.
 
@@ -103,7 +103,7 @@ And as you can see here, Git is telling me that the Tutorial.py file has been mo
 
 I will then go ahead and make another checkpoint in the git repository by adding the modified file to the Working Tree using `$ git .add <file_name>` again, and then commit these changes with another message.
 
-**Getting Back to an Earlier Commit**
+#**Getting Back to an Earlier Commit**
 
 Hypothetically, let's say that these changes that you made prove to be not needed for some reason, and you really want to get back to how things were in your first commit. With Git, this is made completely possible!
 
@@ -120,7 +120,7 @@ As you can see, there are hash codes in an olive color next to "commit." These h
  `$ git checkout <Hashcode>`
  
 
-**Detached Head State?**
+#**Detached Head State?**
 
 After inputting the command you should receive an odd message saying that you are entering a "detached HEAD state." 
 <img width="566" alt="Detached Head" src="https://user-images.githubusercontent.com/99101887/153798112-2b958d3f-cefd-4c39-9ba4-dfe7c4e1d0ee.png">
@@ -133,7 +133,7 @@ Most importantly, if you look back at your project's code, you will see that it 
 <img width="1212" alt="Revert" src="https://user-images.githubusercontent.com/99101887/153798152-715a6dd0-a318-4569-a4e1-9ae4a05099a0.png">
 
 
-**Getting Back to Latest Commit**
+#**Getting Back to Latest Commit**
 
 If you would like to get back to your latest commit and exit out of the ever-so-frightening detached head state, you can enter:
 
@@ -147,7 +147,7 @@ This will bring up all of the commits and their subsequent hashcodes as seen bel
 To get back to the latest commit, simply use the checkout command again with the desired commit hashcode.
 
 
-**Branching**
+#**Branching**
 
 Now let's say that you want to try something completely experimental. You have no idea whether or not it's going to work; however, you want to try it. This brings up the concept of branching. So far, we have been making changes to what is called the "master branch." If all of the changes on the master branch are finalized, and you would like to try and experiment with something, you can essentially create a separate timeline (or branch) on which you can freely make changes *without* altering the finalized stuff whatsoever. This is useful because if you don't like the changes or if the changes you made don't get approved, you can simply delete the branch. Otherwise if you do like them or if they are approved, you can easily merge the experimental branch with the master branch and easily add those changes to the project. 
 
@@ -164,7 +164,7 @@ After doing so, the CLE should say "switching to branch" and then the name of th
 
 
 
-**Merging** 
+#**Merging** 
 
 Now that we are on a new branch, we can start making our experimental changes. This will be reflected by the "print("woah look, I am experimenting with some changes")" function added to the python Tutorial file. Within this branch we can add the file to the Staging Area and make commits just like normal. These commits will only be visible on the branches they were created on. 
 
@@ -179,7 +179,7 @@ If we do like the changes, go ahead, add and commit them. Once this is done, we 
 Now, the changes made in the Experiment branch have been added to the master branch. By using the `$ git log` command, you can see that the commit from the experiment branch is also visible on the master branch. 
 
 
-**Stashes**
+#**Stashes**
 
 In a similar vein, stashing is another way of storing changes made without affecting the master branch. Let's say you are working on an experimental portion of a code, but then you realize that there is a bug in another part of your code. You can use the stash command which will store everything that has been done since the last commit and clean/revert the Working Tree of that branch back to how it was during the last commit. This is done by entering:
 
